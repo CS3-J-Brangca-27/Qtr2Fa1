@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Graded Exercise</title>
+  <style>
+    a:first-of-type:link {
+      color: blue;
+      background-color: lightblue;
+    }
+    
+    a:first-of-type:visited {
+      color: purple;
+      background-color: lavender;
+    }
+    
+    a:first-of-type:hover {
+      color: red;
+      background-color: pink;
+    }
+    
+    a:first-of-type:active {
+      color: white;
+      background-color: darkblue;
+    }
+    
+    a:last-of-type:link {
+      color: green;
+      background-color: lightgreen;
+    }
+    
+    a:last-of-type:visited {
+      color: darkgreen;
+      background-color: lightyellow;
+    }
+    
+    a:last-of-type:hover {
+      color: white;
+      background-color: darkgreen;
+    }
+    
+    a:last-of-type:active {
+      color: yellow;
+      background-color: green;
+    }
+    
+    .first-div {
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .second-div {
+      padding: 10px;
+      border: 2px solid black;
+      margin-bottom: 20px;
+    }
+
+    .second-div.dotted-border {
+      border: 10px dotted green;
+    }
+  </style>
+  <script>
+    function changeStyles(target) {
+      var firstDiv = document.getElementById('first-div');
+      var secondDiv = document.getElementById('second-div');
+      
+      if (target === 'first-div') {
+        firstDiv.style.backgroundColor = 'orange';
+        firstDiv.style.color = 'white';
+      } else if (target === 'second-div') {
+        secondDiv.classList.toggle('dotted-border');
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <a href="#first-div" onclick="changeStyles('first-div')">Animeflix</a><br>
+  <a href="#second-div" onclick="changeStyles('second-div')">Pinterest</a><br><br>
+  
+  <div id="first-div" class="first-div">
+    <h2>Animeflix</h2>
+    <p>Animeflix is a streaming platform for anime enthusiasts. It offers a wide range of anime series and movies for viewers to enjoy.</p>
+    <p>Explore various genres and watch your favorite anime titles on Animeflix.</p>
+    <p>Visit <a href="https://animeflix.io" target="_blank">Animeflix</a> to start streaming.</p>
+  </div>
+
+  <br><br>
+
+  <div id="second-div" class="second-div">
+    <h2>Pinterest</h2>
+    <p>Pinterest is a social media platform that allows users to discover and save ideas for various projects and interests.</p>
+    <p>Users can find inspiration, create collections, and share content on Pinterest.</p>
+    <p>Discover more on <a href="https://www.pinterest.com/" target="_blank">Pinterest</a>.</p>
+  </div>
+
+</body>
+</html>
